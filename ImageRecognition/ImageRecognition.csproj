@@ -11,4 +11,9 @@
     <ProjectReference Include="..\ImageRecognitionML.Model\ImageRecognitionML.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.0-ci2206" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2206" />
+  </ItemGroup>
+
 </Project>

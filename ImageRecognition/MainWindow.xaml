@@ -5,12 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageRecognition"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        >
     <Grid>
-        <Button Content="Open Images" HorizontalAlignment="Left" Margin="59,41,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Image Name="MainImage" HorizontalAlignment="Left" Height="252" Margin="59,80,0,0" VerticalAlignment="Top" Width="600"/>
-        <Button Name="PreviousBTN" Content="Previous" HorizontalAlignment="Left" Height="35" Margin="59,347,0,0" VerticalAlignment="Top" Width="75" Click="PreviousBTN_Click"/>
-        <Button Name="NextBTN" Content="Next" HorizontalAlignment="Left" Height="35" Margin="181,347,0,0" VerticalAlignment="Top" Width="75" Click="NextBTN_Click"/>
+        <Button Content="Open Images" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top" Click="Button_Click" Height="68" Width="210"/>
+        <Image Name="MainImage" HorizontalAlignment="Left" Height="236" Margin="59,96,0,0" VerticalAlignment="Top" Width="456"/>
+        <Button Name="PreviousBTN" Content="Previous" HorizontalAlignment="Left" Height="50" Margin="59,347,0,0" VerticalAlignment="Top" Width="100" Click="PreviousBTN_Click"/>
+        <Button Name="NextBTN" Content="Next" HorizontalAlignment="Left" Height="50" Margin="169,347,0,0" VerticalAlignment="Top" Width="100" Click="NextBTN_Click"/>
+        <ListBox Name="ImagesList" HorizontalAlignment="Left" Height="235" Margin="533,96,0,0" VerticalAlignment="Top" Width="228" SelectionChanged="ImagesList_SelectionChanged"/>
+        <ListBox Name="Predictions" HorizontalAlignment="Left" Height="68" Margin="286,10,0,0" VerticalAlignment="Top" Width="475" SelectionChanged="Predictions_SelectionChanged">
+            <ListBoxItem Height="28">Human</ListBoxItem>
+            <ListBoxItem Height="29">Mountains</ListBoxItem>
+        </ListBox>
 
     </Grid>
 </Window>
